@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="/css/menu.css">
+    <script src="/js/menu.js"> </script>
+    <script src="controller.js"> </script>
+</head>
+<body>
+<header class="header" id="menu"></header>
+
+<!--list-->
+<div class='container'>
+    <div class='row'>
+        <div class='col-6'>
+            <div class='col-12 text-centered cooper'>
+                <input id="nombreBusqueda" type="text">
+                <input id="search" class="boton" type="button" value="Buscar">
+                <input id="new" class="boton" type="button" value="Crear">
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-12'>
+            <hr>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-6'>
+            <table class='container'>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Identificacion</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
+                    <th>...</th>
+                </tr>
+                </thead>
+                <tbody class='container' id='list'>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--overly-->
+<div id="itemoverlay" class="itemoverlay"></div>
+
+<!--item-->
+<div id="itemview" class='itemview'>
+    <div class='col-12'>
+        <div>
+            <form name="formulario">
+                <div class='container'>
+                    <div class='row'><div class='col-12 text-centered cooper'>Perfil</div></div>
+                    <div class='row'><div class='col-3 text-right'>Identificacion</div><div class='col-6'><input type="text" name="identificacion" id="identificacion" value=""></div></div>
+                    <div class='row'><div class='col-3 text-right'>Nombre</div><div class='col-6'><input type="text" name="nombre" id="nombre" value=""></div></div>
+                    <div class='row'><div class='col-3 text-right'>Correo</div><div class='col-6'><input type="text" name="correo" id="correo" value=""></div></div>
+                    <div class='row'><div class='col-3 text-right'>Telefono</div><div class='col-6'><input type="text" name="telefono" id="telefono" value=""></div></div>
+
+                    <div class='row'>
+                        <div class='col-6 text-centered cooper'>
+                            <input id="registrar" class="boton" type="button" value="Registrar">
+                            &nbsp
+                            <input id="cancelar" class="boton" type="button" value="Cancelar">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

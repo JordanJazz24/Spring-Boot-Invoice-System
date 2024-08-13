@@ -1,0 +1,29 @@
+<header th:fragment="header" class="header">
+    <div>
+        <div><img class="logo" src="/images/logo.png"/>&nbsp</div>
+        <div>Factura Electronica</div>
+    </div>
+    <div>
+        <ul class="Menu">
+            <li><a href="/presentation/acercade/show"> Acerca de...</a></li>
+            <li><a href="/presentation/acercade/show"> Proveedores</a>&nbsp&nbsp</li>
+            <th:block th:if="${session.usuario!=null}">
+                <th:block th:if="${session.usuario.getRol().equals('PRO')}">
+                    <li>
+                        <a href="/presentation/proveedor/show">Proveedores</a>
+                    </li>
+                    <li>
+                        <a href="/presentation/login/show">Login</a>
+                    </li>
+                </th:block>
+
+            </th:block>
+            <th:block th:unless="${session.usuario!=null}">
+                <li><a href="/presentation/login/show">Login</a></li>
+            </th:block>
+        </ul>
+    </div>
+</header>
+
+<header th:fragment="footer" class="footer">
+</header>

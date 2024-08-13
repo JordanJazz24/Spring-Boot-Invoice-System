@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Factura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="/css/menu.css">
+    <script src="/js/menu.js"> </script>
+    <script src="controller.js"> </script>
+</head>
+<body>
+<header class="header" id="menu"></header>
+<div id="itemview" class='itemview'>
+    <div class='col-12'>
+        <div>
+            <form name="formulario">
+                <div class='container'>
+                    <div class='row'><div class='col-12 text-centered cooper'>EDICION DE PERFIL</div></div>
+                    <div class='row'><div class='col-3 text-right'>Usuario</div><div class='col-6'><input type="text" name="Usuario" id="usuario" value=""></div></div>
+                    <div class='row'><div class='col-3 text-right'>Nombre</div><div class='col-6'><input type="text" name="nombre" id="nombre" value=""></div></div>
+                    <div class='row'><div class='col-3 text-right'>Contrasena</div><div class='col-6'><input type="text" name="Contrasena" id="contrasena" value=""></div></div>
+
+                    <div class='row'>
+                        <div class='col-6 text-centered cooper'>
+                            <input id="registrar" class="boton" type="button" value="Actualizar">
+                            &nbsp
+                            <input id="cancelar" class="boton" type="button" value="Cancelar">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

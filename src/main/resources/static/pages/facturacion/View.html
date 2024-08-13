@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factura</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="/css/menu.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css"/>
+    <link href="/images/favicon.ico" rel="icon">
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="/css/menu.css">
+    <script src="/js/menu.js"> </script>
+    <script src="controller.js"> </script>
+</head>
+<body>
+<header class="header" id="menu"></header>
+
+<div class="container">
+    <h2>Facturación</h2>
+    <table>
+        <thead>
+        <tr>
+            <th><b>Proveedor:</b>
+                <span id="proveedorNombre">...</span>
+            </th>
+            <br>
+        </tr>
+        <tr>
+            <th>
+                <b>Cliente:&nbsp;</b>
+                <span id="clienteNombre">...</span>
+                <input id="clienteIdentificacion" name="identificacion" type="text">
+                <input id="validarCliente" class="boton" type="button" value="Validar">
+                <a href="/pages/clientes/View.html">Buscar</a>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <b>Productos:&nbsp;</b>
+                <span id="productoNombre">...</span>
+                <input id="productoCodigo" name="codigo" type="text">
+                <input id="validarProducto" class="boton" type="button" value="Validar">
+                <a href="/pages/productos/View.html">Buscar</a>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <table>
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Cant</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Monto</th>
+                        <th>...</th>
+                    </tr>
+                    </thead>
+                    <tbody id="detallesList">
+                    <!-- Detalles de la factura se cargarán aquí -->
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <input id="guardarFactura" class="boton" type="button" value="Guardar Factura">
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
