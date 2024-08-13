@@ -1,2 +1,2 @@
 # Facturacion-CSR
- Website made in Java +Thymeleaf framework, with user login a roles, implementing server side rendering and persistance with mySQL.
+Website made in Java +Javascript +SpringBoot framework, with user login and roles, implementing client side rendering and persistence with mySQL.
