@@ -1,146 +1,124 @@
-# Facturacion-CSR
-
-**Autor:** [JordanJazz24](https://github.com/JordanJazz24)  
-**Repositorio:** [Facturacion-CSR](https://github.com/JordanJazz24/Facturacion-CSR)  
-**Lenguajes principales:** Java (Spring Boot), JavaScript  
-**Base de datos:** MySQL  
+# Spring-Boot-Invoice-System
 
 
----
+**Author:** [Jordanjazz24] (https://github.com/jordanjazzz24)
+**Repository:** [Spring-boot-invoice-stem] (https://github.com/jordanjazz2/sspring-boot-invoice-sstem)
+**Lenguajes Principailes:** Java (Spring Boot), JavaScript
+**Date base:** mysql 
 
-## Descripción
-
-Facturacion-CSR es una solución integral de facturación electrónica y gestión comercial, desarrollada con Java y Spring Boot, que implementa client-side rendering y persistencia con MySQL. El sistema permite la administración eficiente de usuarios, proveedores, clientes, productos y facturas, integrando seguridad mediante roles y autenticación.
-
-La arquitectura modular y el uso de buenas prácticas de desarrollo garantizan la escalabilidad, robustez y facilidad de mantenimiento del sistema.
 
 ---
 
-## Características principales
+## Description
 
-- **Gestión de usuarios con roles y autenticación:**  
-  Seguridad basada en Spring Security, con almacenamiento seguro de contraseñas y roles diferenciados para usuarios y proveedores.
+Spring-Boot-Invouize-System is an integral solution for electronic billing and commercial management, developed with Java and Spring Boot, which implements Client-Side Rendering and Persistence with MySQL. The system allows efficient administration of users, suppliers, customers, products and invoices, integrating safety through roles and authentication.
 
-- **Administración de proveedores, clientes y productos:**  
-  CRUD completo para todas las entidades del sistema, permitiendo búsquedas, modificaciones y eliminaciones eficientes.
-
-- **Facturación electrónica:**  
-  Generación y gestión de facturas con detalles asociados por cliente y proveedor.
-
-- **Persistencia con MySQL:**  
-  Todas las operaciones se realizan sobre una base de datos relacional, asegurando integridad y rendimiento.
-
-- **API RESTful bien estructurada:**  
-  Endpoints claros y documentados para consumir desde frontend o aplicaciones externas.
-
-- **Client-side rendering:**  
-  Interfaces de usuario modernas y dinámicas, facilitando la experiencia de usuario.
+Modular architecture and the use of good development practices guarantee scalability, robustness and system maintenance ease.
 
 ---
 
-## Estructura del proyecto
+## Main features
+
+- **User management with roles and authentication:**
+SPRING SECURITY BASED SAFETY, with safe password storage and differentiated roles for users and suppliers.
+
+- **Administration of suppliers, customers and products:**
+Complete CRUD for all system entities, allowing efficient searches, modifications and eliminations.
+
+- **Electronic billing:**
+Generation and management of invoices with details associated by customer and supplier.
+
+- **Persistence with MySQL:**
+All operations are carried out on a relational database, ensuring integrity and performance.
+
+- **API restful well structured:**
+Clear and documented endpoints to consume from Fronnd or external applications.
+
+- **Client-side rendering:**
+Modern and dynamic user interfaces, facilitating user experience.
+
+---
+
+## Project structure
 
 ```
-src/
-├── main/
-│   ├── java/com/example/facturacion/
-│   │   ├── data/          # Repositorios JPA (Usuarios, Proveedores, Clientes, Productos, Facturas, Detalles)
-│   │   ├── logic/         # Lógica de negocio (Service, entidades)
-│   │   ├── presentation/  # Controladores REST para cada entidad
-│   │   ├── security/      # Seguridad y autenticación
-│   │   └── FacturacionApplication.java # Entry point (Spring Boot)
-│   └── resources/
-│       └── static/        # Recursos estáticos y frontend
-└── test/
-    └── java/com/example/facturacion/
+SRC/
+├── Main/
+│ ├── Java/com/Example/invoice
+│ │ ├ ├── Data/ # Repositorias JPA (Users, Provors, Customers, Products, Invoices, Dealles)
+│ │ ├ ├── Logic/ # business logic (service, entities)
+│ │ ├ ├── Presentation/ # REST Controllers for each ENTIDAD
+│ │ ├ ├── SECURITY/ # SECURITY Y AUTENTICACIÓN
+│ │ └ └── FacturacionApplication. Java # Entry Point (Spring Boot)
+│ └── Resources/
+│ └── STATIC/ # STATIC RESOURCES Y Fordrand
+└── Test/
+└── Java/com/Example/Facturacion
 ```
 
 ---
 
-## Principales endpoints
+## Main Endpoints
 
-### Usuarios y autenticación
+### Users and authentication
 
 - `/api/auth/login` — Inicio de sesión de usuarios
 - `/api/usuarios` — CRUD de usuarios
 
-### Proveedores
+### Providers
 
 - `GET /api/proveedores` — Lista de proveedores
 - `POST /api/proveedores/{id}` — Activar/desactivar proveedor
 - `GET /api/proveedores/search?usuarioId=...` — Buscar proveedor por usuario
 
-### Productos
+### Products
 
-- CRUD completo de productos
-- Búsquedas y eliminación por código o proveedor
+- Complete crud of products
+- Searches and elimination by code or supplier
 
-### Clientes
+### Customers
 
-- CRUD completo de clientes
-- Búsquedas por identificación, asociación a proveedores
+- Complete CRUD OF CUSTOMERS
+- Identification searches, association to suppliers
 
-### Facturas y detalles
+### Invoices and details
 
-- Gestión y consulta de facturas asociadas a proveedores
-- Gestión de detalles por factura
-
----
-
-## Seguridad
-
-- Autenticación basada en Spring Security
-- Implementación de UserDetailsService personalizado
-- Manejo de roles y control de acceso por endpoint
-- Contraseñas encriptadas con BCrypt
+- Management and consultation of invoices associated with suppliers
+- Detail management by invoice
 
 ---
 
-## Instalación y ejecución
+## Security
 
-1. **Clona el repositorio:**
-   ```bash
-   git clone https://github.com/JordanJazz24/Facturacion-CSR.git
-   cd Facturacion-CSR
-   ```
-
-2. **Configura la base de datos MySQL** (credenciales en `application.properties`).
-
-3. **Construye el proyecto:**
-   ```bash
-   ./mvnw clean install
-   ```
-
-4. **Ejecuta la aplicación:**
-   ```bash
-   ./mvnw spring-boot:run
-   ```
-   La API estará disponible en `http://localhost:8080/`.
+- Spring Security -based authentication
+- UserdetailService Personalized implementation
+- Roles management and access control by Endpoint
+- Passwords encrypted with BCRYPT
 
 ---
 
-## Pruebas
+Installation and execution
 
-El proyecto utiliza Spring Boot Test y JUnit como base para pruebas de integración y unitarias. Puedes extender los tests para cubrir todos los casos de uso críticos.
+1. **Clone the repository:**
+`` Bash
+GIT CLONE https://github.com/jordanjazz24/facturacion-csr.git
+CD Billing-CSR
+``
+
+2. **Configure the MySQL** database (credentials in `Application.properties`).
+
+3. **Build the project:**
+`` Bash
+./MVNW CLEAN INSTALL
+``
+
+4. **Execute the application:**
+`` Bash
+./MVNW Spring-Boot: Run
+``
+The API will be available at `http: // localhost: 8080/`.
 
 ---
 
-## Contribuciones
 
-Las contribuciones son bienvenidas. Abre un issue o un pull request para sugerir mejoras o reportar problemas.
 
----
-
-## Licencia
-
-Este proyecto está bajo licencia MIT (adáptalo según tus necesidades).
-
----
-
-## Contacto
-
-Para dudas, sugerencias o soporte, contacta a [JordanJazz24](https://github.com/JordanJazz24).
-
----
-
-**Facturacion-CSR demuestra una arquitectura limpia, patrones de diseño modernos y buenas prácticas en seguridad y desarrollo backend con Java y Spring Boot.**
