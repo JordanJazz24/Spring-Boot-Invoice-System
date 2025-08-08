@@ -1,9 +1,6 @@
 # Spring-Boot-Invoice-System
 
-
-**Author:** [Jordanjazz24] (https://github.com/jordanjazzz24)
-**Repository:** [Spring-boot-invoice-stem] (https://github.com/jordanjazz2/sspring-boot-invoice-sstem)
-**Lenguajes Principailes:** Java (Spring Boot), JavaScript
+**Lenguajes Principailes:** Java (Spring Boot), JavaScript -
 **Date base:** mysql 
 
 
